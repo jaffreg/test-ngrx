@@ -5,8 +5,8 @@ export const initialState = 0;
 
 export const counterReducer = createReducer(
   initialState,
-  on(increment, (state) => {
-    console.log('dans increment');
+  on(increment, (state, action) => {
+    console.log('dans increment : ' + action.dateAction);
     return state + 1;
   }),
   on(decrement, (state) => state - 1),
