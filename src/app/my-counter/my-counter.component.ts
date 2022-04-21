@@ -12,6 +12,7 @@ export class MyCounterComponent {
 
   constructor(private store: Store<{ count: number }>) {
     this.count$ = store.select('count');
+    console.log('constructeur');
   }
 
   increment() {
